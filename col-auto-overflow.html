@@ -1,0 +1,26 @@
+<!-- 
+The max-width on col-auto is now reset to override inherited max-width from lower grid tiers.
+
+My concern is about the new value of max-width. With max-width: none , a col-auto column may overflow from its row container / parent. 
+Is it an expected behavior? Why not use max-width: 100% to override it and keep the column inside the row?
+
+This fixes the overflow:
+.col-auto {
+    max-width: 100%;
+} 
+
+-->
+
+
+<div class="container">
+    <div class="row bg-secondary mb-2 p-2">
+      <div class="col">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur id diam et nibh mollis suscipit id nec lectus. Aliquam dapibus felis et arcu faucibus iaculis. Praesent eleifend suscipit mauris non iaculis. Nullam dolor velit, semper sit amet varius a, condimentum in nunc. Morbi sit amet orci ac arcu fringilla aliquam scelerisque vel nibh. Vestibulum eget elementum ex, et laoreet enim. Etiam sagittis bibendum tristique. Nullam quis neque finibus ante semper auctor. Donec in rhoncus dolor. Etiam eu purus eu metus ultrices gravida nec non nunc.
+      </div>
+    </div>
+    <div class="row bg-secondary mb-2 p-2">
+      <div class="col-auto">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur id diam et nibh mollis suscipit id nec lectus. Aliquam dapibus felis et arcu faucibus iaculis. Praesent eleifend suscipit mauris non iaculis. Nullam dolor velit, semper sit amet varius a, condimentum in nunc. Morbi sit amet orci ac arcu fringilla aliquam scelerisque vel nibh. Vestibulum eget elementum ex, et laoreet enim. Etiam sagittis bibendum tristique. Nullam quis neque finibus ante semper auctor. Donec in rhoncus dolor. Etiam eu purus eu metus ultrices gravida nec non nunc.
+      </div>
+  </div>
+</div>
